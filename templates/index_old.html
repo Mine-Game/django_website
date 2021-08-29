@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+
+
+
+<br>
+<br>
+
+
+<form action="{% url 'datafile_page' %}" target="_blank">
+   <button>Переход к базе</button>
+</form>
+
+<form action="admin/" target="_blank">
+   <button>Переход в панель администратора</button>
+</form>
+<br>
+<br>
+
+
+<form action="{% url 'thanks_page' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">ОТПРАВИТЬ</button>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+</body>
+</html>
