@@ -22,6 +22,5 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.first_page),
-    path('thanks', views.thanks_page, name = 'thanks_page'),
-    path('datafile', views.datafile_page, name = 'datafile_page')
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('thanks/', views.thanks_page, name='thanks_page')
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
